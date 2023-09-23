@@ -5,14 +5,14 @@ Llama2 Chatbot Package Overview
 
 Introduction:
 -------------
-The Llama2 Chatbot package provides scripts which permit local document querying.  
-It utilizes various data sources, including PDFs, Excel files, and TXT files, to ingest and process data. 
+The Llama2 Chatbot package provides scripts that permit local document querying.  
+It utilizes various data sources, including pdf, xlsx, and txt files, to ingest and process data. 
 The processed data is then used by a retrieval-based chatbot to answer user queries.
 
 Scripts:
 --------
 1. `model.py`:
-    - Purpose: Sets up the chatbot's underlying model and manages interactions with users.
+    - Purpose: Set up the chatbot's underlying model and manage interactions with users.
     - Main Functions: 
         - `set_custom_prompt()`: Sets up a custom prompt template for the chatbot.
         - `retrieval_qa_chain()`: Configures a retrieval-based question-answering chain.
