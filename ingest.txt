@@ -1,0 +1,30 @@
+
+ingest.py Documentation
+=======================
+
+Purpose:
+--------
+The `ingest.py` script is responsible for ingesting various data sources, processing them, and storing the processed data in a vector database. 
+It supports multiple data formats including PDFs, Excel files, and TXT files.
+
+Main Functions:
+---------------
+1. `load_txt_files(data_path)`:
+    - Description: Loads content from TXT files in the specified directory.
+    - Parameters:
+        - `data_path`: Path to the directory containing TXT files.
+    - Returns: List of document contents.
+
+2. `create_vector_db()`:
+    - Description: Processes data from various sources and creates a vector database. This function loads data, processes it, and stores the result in a vector database.
+    - Returns: None.
+
+Usage:
+------
+To process data and create the vector database, execute the `ingest.py` script. Ensure that the required data sources are available in the specified directory. 
+The processed data will be stored in a vector database, which can then be used by the chatbot in `model.py` to answer user queries.
+
+Important Notes:
+----------------
+- Ensure that the required environment variables, including paths to data sources and the vector database, are set before running the script.
+- The script uses various libraries for data loading and processing. Ensure that these libraries are installed and properly configured.

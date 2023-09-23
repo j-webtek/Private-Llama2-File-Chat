@@ -1,0 +1,46 @@
+
+model.py Documentation
+======================
+
+Purpose:
+--------
+The `model.py` script sets up the chatbot's underlying model and manages interactions with users. 
+It initializes the bot components, defines event handlers for chat interactions, 
+and provides the main execution point for running the bot.
+
+Main Functions:
+---------------
+1. `set_custom_prompt()`:
+    - Description: Sets up a custom prompt template for the chatbot.
+    - Returns: Custom prompt template.
+
+2. `retrieval_qa_chain(llm, prompt, db)`:
+    - Description: Configures a retrieval-based question-answering chain.
+    - Parameters:
+        - `llm`: Large Language Model.
+        - `prompt`: Prompt template.
+        - `db`: Vector database object.
+    - Returns: Configured question-answering chain.
+
+3. `load_llm()`:
+    - Description: Loads the large language model.
+    - Returns: Loaded language model.
+
+4. `qa_bot()`:
+    - Description: Initializes the QA bot components.
+    - Returns: Configured QA chain.
+
+5. `main()`:
+    - Description: Main function to set up chatbot event handlers and manage interactions. This function initializes the bot, sets up event handlers for chat interactions, and manages errors.
+
+Usage:
+------
+To run the chatbot, execute the open Git Bash and input/execute the following: chainlit run model.py -w
+.
+Ensure that the vector database is created beforehand using the `ingest.py` script. 
+The chatbot will interact with users and answer queries based on the processed data stored in the vector database.
+
+Important Notes:
+----------------
+- Ensure that the required environment variables, including paths to data sources and the vector database, are set before running the script.
+- The script uses the ChainLit library for chat interactions. Ensure that this library is installed and properly configured.
