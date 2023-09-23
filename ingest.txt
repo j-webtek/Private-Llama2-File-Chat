@@ -5,12 +5,12 @@ ingest.py Documentation
 Purpose:
 --------
 The `ingest.py` script is responsible for ingesting various data sources, processing them, and storing the processed data in a vector database. 
-It supports multiple data formats including PDFs, Excel files, and TXT files.
+It supports multiple data formats including pdf, xsls, and txt files.
 
 Main Functions:
 ---------------
 1. `load_txt_files(data_path)`:
-    - Description: Loads content from TXT files in the specified directory.
+    - Description: Loads content from pdf/xsls/txt files in the specified directory.
     - Parameters:
         - `data_path`: Path to the directory containing TXT files.
     - Returns: List of document contents.
