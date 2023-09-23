@@ -33,4 +33,4 @@ Usage:
 To use the Llama2 Chatbot, ensure that the required data sources are available in the specified 'data' directory. 
 This data can be in the file format of pdf, txt, or xlsx.
 Run the `ingest.py` script first to process the data and create the vector database. 
-Once the database is ready, open Git Bash within your folder, and input/execute the following: chainlit run model.py -w to start the chatbot and interact with users.
+Once the database is ready, open Git Bash within your folder, and input/execute the following: chainlit run model.py -w to start the chatbot and interact with your files.
