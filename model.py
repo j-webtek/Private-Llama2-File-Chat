@@ -9,12 +9,13 @@ from langchain.llms import CTransformers
 from langchain.chains import RetrievalQA
 import chainlit as cl
 
-# Load environment variables
+# Load environment variables from a .env file
 load_dotenv()
 
-# Configuration
+# Define path to the FAISS vector store database
 DB_FAISS_PATH = os.getenv("DB_FAISS_PATH", "vectorstore/db_faiss")
 
+# Custom prompt template to structure the bot's response
 custom_prompt_template = """Use the following pieces of information to answer the user's question.
 If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
@@ -99,6 +100,7 @@ def final_result(query):
 def main():
     """Main function to set up chatbot event handlers and manage interactions."""
     try:
+        # Event handler for the start of the chat
         @cl.on_chat_start
         async def start():
             try:
@@ -113,6 +115,7 @@ def main():
                 print(error_message)
                 await cl.Message(content=f"An error occurred: {str(e)}").send()
 
+        # Event handler for incoming messages from users
         @cl.on_message
         async def main(message):
             try:
@@ -137,7 +140,8 @@ def main():
                 await cl.Message(content=f"An error occurred: {str(e)}").send()
                 
     except Exception as e:
+        # Handle exceptions at the script level
         print(f"Error in main script: {str(e)}\n{traceback.format_exc()}")
 
-# Call the main function to execute the script
+# Execute the main function to run the bot
 main()
