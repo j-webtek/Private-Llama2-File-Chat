@@ -31,11 +31,11 @@ Main Functions:
     - Returns: Configured QA chain.
 
 5. `main()`:
-    - Description: Main function to set up chatbot event handlers and manage interactions. This function initializes the bot, sets up event handlers for chat interactions, and manages errors.
+    - Description: Main function is to set up chatbot event handlers and manage interactions. This function initializes the bot, sets up event handlers for chat interactions, and manages errors.
 
 Usage:
 ------
-To run the chatbot, execute the open Git Bash and input/execute the following: chainlit run model.py -w
+To run the chatbot, execute and open Git Bash and input/execute the following: chainlit run model.py -w
 .
 Ensure that the vector database is created beforehand using the `ingest.py` script. 
 The chatbot will interact with users and answer queries based on the processed data stored in the vector database.
